@@ -1,6 +1,6 @@
 package com.company;
 
-
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
 public class Main {
 
@@ -12,7 +12,4 @@ public class Main {
         System.out.println("fræk fyr på linjen? ring:12345678");
     }
 
-
-
 }
-
