@@ -5,7 +5,7 @@ import java.util.List;
 public class HealthPersonApp {
 
     public static void main(String[] args) {
-        Bruger johnny = new Doctor();
+        Bruger Bente = new Doctor();
         Doctor doc = new Doctor();
         Bruger rachel = new Nurse();
         // det på højre skal være i forlængelse af det til venstre.
@@ -15,14 +15,14 @@ public class HealthPersonApp {
         // kan gøres pga. nurse og doctor extends
 
 //giv objekter navne
-        johnny.name = "Osama";
+        Bente.id = 1;
         doc.name = "Jørgen";
         rachel.name = "Rachel";
         rasmus.name = "Rasmus";
 
         // tilføj liste med objekter.
         List<Bruger> healthPersonnel = new ArrayList<Bruger>();
-        healthPersonnel.addAll(Arrays.asList(johnny, doc, rachel));
+        healthPersonnel.addAll(Arrays.asList(Bente, doc, rachel));
         for (int i=0; i<healthPersonnel.size(); i++){
             if(healthPersonnel.get(i).getName().contains("Dr")){
                 System.out.println(healthPersonnel.get(i).getName());

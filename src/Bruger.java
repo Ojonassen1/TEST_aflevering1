@@ -1,7 +1,7 @@
 import java.sql.SQLOutput;
 
 public abstract class Bruger {
-    private int id ;
+    public int id ;
     String name;
     private int count = 0;
 
