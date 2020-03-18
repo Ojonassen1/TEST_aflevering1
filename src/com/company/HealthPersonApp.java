@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,7 +29,7 @@ public class HealthPersonApp {
             if(healthPersonnel.get(i).getName().contains("Dr")){
                 System.out.println(healthPersonnel.get(i).getName());
                 //fjern ! hvis du vil have doktorer
-                // hav hvis vil have Nurse også
+                // hav hvis vil have com.company.Nurse også
 
             }
 
