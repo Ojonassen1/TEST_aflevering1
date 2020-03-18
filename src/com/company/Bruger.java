@@ -3,13 +3,13 @@ package com.company;
 import java.sql.SQLOutput;
 
 public abstract class Bruger {
-    private int id ;
+    int id;
     String name;
     private int count = 0;
 
-    public void getId(){
-        System.out.println(id);
-
+    public int getId(){
+        //System.out.println(id);
+        return id;
     }
 
     public void setId(){
