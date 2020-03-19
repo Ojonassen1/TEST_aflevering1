@@ -1,7 +1,5 @@
 package com.company;
 
-import java.sql.SQLOutput;
-
 public abstract class Bruger {
     int id;
     String name;

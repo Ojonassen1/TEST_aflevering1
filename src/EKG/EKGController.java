@@ -11,7 +11,7 @@ public class EKGController implements EKGListener {
 
     @Override
     public void notify(EKGData data) {
-        System.out.println("Got Data"+ data.getSample());
+        System.out.println("Got Data " + data.getSample());
 
     }
 }
