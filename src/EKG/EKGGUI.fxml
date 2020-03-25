@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
@@ -8,6 +9,6 @@
    <children>
       
       <Button fx:id="buttonPressed" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" onAction="#buttonPressed" text="Start" />
-      <Polyline fx:id="Linje" layoutX="14" layoutY="22" strokeType="INSIDE" />
+      <Polyline fx:id="Linje"  layoutY="20" layoutX="20" points="10,-20,10,-20" strokeType="INSIDE" />
    </children>
 </AnchorPane>

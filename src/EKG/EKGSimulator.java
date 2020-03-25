@@ -21,7 +21,7 @@ public class EKGSimulator implements EKGsampler,Runnable {
     public void run(){
         for (int i = 0; i < data.size(); i++) {
             try{
-                Thread.sleep(200);
+                Thread.sleep(100);
                 if(listener!=null){
                     LocalDateTime now = LocalDateTime.now();
                     listener.notify(
