@@ -3,6 +3,7 @@ package com.company;
 public abstract class Bruger {
     int id;
     String name;
+    int password;
     private int count = 0;
 
     public int getId(){
@@ -11,7 +12,7 @@ public abstract class Bruger {
     }
 
     public void setId(){
-
+    count++;
     }
 
     public void setName(String inputstring){
@@ -23,5 +24,9 @@ public abstract class Bruger {
     public String getName() {
         //System.out.println(name);
         return name;
+    }
+
+    public int getPassword() {
+        return password;
     }
 }

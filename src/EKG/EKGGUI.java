@@ -1,28 +1,31 @@
 package EKG;
 
+import javafx.application.Application;
 import javafx.beans.InvalidationListener;
 import javafx.event.ActionEvent;
+import javafx.scene.shape.Polyline;
 
+import javax.swing.event.ChangeListener;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
 
-public class EKGGUI {
-    public javafx.scene.shape.Polyline Polyline;
+public class EKGGUI implements EKGListener{
 
-    public void buttonPressed(ActionEvent actionEvent) throws InterruptedException {
-        //System.out.println("Heeeej");
-        // tager tid, så får sin egen tråd.
-        new Thread(new Runnable() {
-            public void run() {
-                for (int i = 0; i < 10; i++) {
-                    Polyline.getPoints().addListener((InvalidationListener) Paths.get("/Users/kevinpedersen/IdeaProjects/TEST_aflevering1/src/EKG/EKG100Hz"));
-                    try {
-                        Thread.sleep(20);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
+    public javafx.scene.shape.Polyline Linje;
+    private double possition =0.0;
 
-        }).start();
+    public void buttonPressed(ActionEvent actionEvent) throws Exception {
+        EKGController.generator.register(this);
+
+    }
+
+    @Override
+    public void notify(EKGData data) {
+        Linje.getPoints().addAll(possition,10.0);
+        possition+=1;
+        System.out.println("opdating line");
     }
 }
+

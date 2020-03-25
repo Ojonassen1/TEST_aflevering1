@@ -1,10 +1,21 @@
 package com.company;
 
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPaneBuilder;
+import javafx.stage.Stage;
+
+import javafx.event.ActionEvent;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class HealthPersonApp {
+public class HealthPersonApp extends Application {
 
     public static void main(String[] args) {
         Bruger bente = new Doctor();
@@ -16,15 +27,16 @@ public class HealthPersonApp {
 
         //giv objekter navne
         lasse.name = "Lasse";
-        lasse.id= 23456;
-        bente.name="Bente";
+        lasse.id = 23456;
+        bente.name = "Bente";
         bente.id = 12345;
+        bente.password = 12345;
         rachel.name = "Rachel";
-        rachel.id=34567;
+        rachel.id = 34567;
 
 
         // tilføj liste med objekter.
-        List<Bruger> healthPersonnel = new ArrayList<Bruger>();
+        List<Bruger> healthPersonnel = new ArrayList<>();
         healthPersonnel.addAll(Arrays.asList(bente, lasse, rachel));
         for (int i = 0; i < healthPersonnel.size(); i++) {
             // if(healthPersonnel.get(i).getName().contains("Dr")){
@@ -35,10 +47,21 @@ public class HealthPersonApp {
 
         }
 
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("App.fxml"));
+        primaryStage.setTitle("Sygedatabasen");
+        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.show();
+
 
     }
 
-
 }
+
+
 
 

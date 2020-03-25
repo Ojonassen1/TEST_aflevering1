@@ -11,7 +11,7 @@ public class DataSampleReaderSimImpl implements DataSampleReader{
     public List<Double> loadData() {
         try {
             System.out.println(Paths.get("").toAbsolutePath());
-            List<String> strings = Files.readAllLines(Paths.get("/Users/kevinpedersen/IdeaProjects/TEST_aflevering1/src/EKG/EKG100Hz"));
+            List<String> strings = Files.readAllLines(Paths.get("C:\\Users\\ami\\IdeaProjects\\TEST_aflevering1\\src\\EKG\\EKG100Hz"));
             System.out.println("Read data!");
             return strings.stream().map(s-> Double.parseDouble(s)).collect(Collectors.toList());
         } catch (IOException e) {
@@ -19,4 +19,5 @@ public class DataSampleReaderSimImpl implements DataSampleReader{
         }
         return null;
     }
+
 }
