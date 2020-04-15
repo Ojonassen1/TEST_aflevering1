@@ -23,9 +23,16 @@ public class EKGGUI implements EKGListener{
 
     @Override
     public void notify(EKGData data) {
-        Linje.getPoints().addAll(possition,data.getSample());
-        possition+=1;
-        System.out.println("opdating line");
+
+        if (possition<700){
+            Linje.getPoints().addAll(possition,-data.getSample());
+            possition+=1;
+        }else {
+            Linje.getPoints().clear();
+            possition=0.0;
+        }
+
+        //System.out.println("opdating line");
     }
 }
 
