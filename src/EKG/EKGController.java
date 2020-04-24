@@ -12,6 +12,7 @@ import javafx.application.Application;
 import java.io.IOException;
 import java.nio.file.Paths;
 
+
 public class EKGController extends Application implements EKGListener {
     public static EKGSimulator generator= new EKGSimulator();
     public static void main(String[] args) {
@@ -26,7 +27,11 @@ public class EKGController extends Application implements EKGListener {
     @Override
     public void notify(EKGData data) {
         //System.out.println("Got Data " + data.getSample());
-
+        /*try {
+            System.out.println(DummyTemperatur.DummyTemperatur());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
     }
 
     public void start(Stage primaryStage) throws IOException {

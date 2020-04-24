@@ -3,12 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="1000" prefWidth="1000" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EKG.EKGGUI">
     <children>
 
         <Button fx:id="buttonPressed" layoutX="80.0" layoutY="22.0" mnemonicParsing="false" onAction="#buttonPressed" text="Start" />
         <Polyline fx:id="Linje" layoutX="145.0" layoutY="900" strokeType="INSIDE" />
-      <TextArea layoutX="10.0" layoutY="100.0" prefHeight="20.0" prefWidth="20.0" />
+      <Text fx:id="text" layoutX="40.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" />
     </children>
 </AnchorPane>

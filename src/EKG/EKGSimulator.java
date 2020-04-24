@@ -30,6 +30,7 @@ public class EKGSimulator implements EKGsampler,Runnable {
             } catch (InterruptedException e){
                 e.printStackTrace();
             }
+
         }
     }
 
