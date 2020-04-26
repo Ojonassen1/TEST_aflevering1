@@ -11,11 +11,24 @@ import javafx.stage.Stage;
 import javafx.application.Application;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 
 public class EKGController extends Application implements EKGListener {
     public static EKGSimulator generator= new EKGSimulator();
     public static void main(String[] args) {
+        /*Connection conn = MySQLConnector.getConn();
+        try{
+            Statement st = conn.createStatement();
+            int id = 0;
+            double temp = DummyTemperatur.DummyTemperatur();
+            String insert = "INSERT INTO Temperatur VALUES ('"+id+"','"+temp+"')";
+            st.executeUpdate(insert);
+        } catch (SQLException | InterruptedException e) {
+            e.printStackTrace();
+        }*/
         EKGController ekgController = new EKGController();
         generator.register(ekgController);
         new Thread(generator).start();

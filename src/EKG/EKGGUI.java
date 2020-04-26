@@ -13,6 +13,7 @@ import java.util.List;
 
 public class EKGGUI implements EKGListener {
     public javafx.scene.text.Text text;
+    public javafx.scene.text.Text text2;
     public javafx.scene.shape.Polyline Linje;
     private double possition = 0.0;
 
@@ -35,13 +36,15 @@ public class EKGGUI implements EKGListener {
 
         if(possition == 50.0) {
             try {
-
+                text2.setText("BPM: " + String.valueOf(DummyPuls.DummyPuls()));
                 text.setText("Temperatur: " + String.valueOf(DummyTemperatur.DummyTemperatur()) + "°C");
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
         }
+
         //System.out.println("opdating line");
     }
 }

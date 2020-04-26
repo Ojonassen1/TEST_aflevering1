@@ -14,8 +14,8 @@ public class DummyTemperatur implements EKGListener {
 
                 try {
 
-                int overst = 180;
-                int nederst = 160;
+                int overst = 175;
+                int nederst = 165;
                 int range = overst - nederst + 1;
                 double rand = ((double)Math.random() * range) + nederst;
                 double temperatur = rand * 4 / 50 + 24;
