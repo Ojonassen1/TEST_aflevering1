@@ -1,19 +1,11 @@
 package EKG;
 
-import javafx.beans.InvalidationListener;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.PerspectiveCamera;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.application.Application;
 import java.io.IOException;
-import java.nio.file.Paths;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
 
 
 public class EKGController extends Application implements EKGListener {
@@ -38,7 +30,7 @@ public class EKGController extends Application implements EKGListener {
 
 
     @Override
-    public void notify(EKGData data) {
+    public void notify(PatientDTO data) {
         //System.out.println("Got Data " + data.getSample());
         /*try {
             System.out.println(DummyTemperatur.DummyTemperatur());

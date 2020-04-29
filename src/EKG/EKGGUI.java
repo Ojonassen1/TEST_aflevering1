@@ -1,15 +1,6 @@
 package EKG;
 
-import javafx.application.Application;
-import javafx.beans.InvalidationListener;
 import javafx.event.ActionEvent;
-import javafx.scene.shape.Polyline;
-
-import javax.swing.event.ChangeListener;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
 
 public class EKGGUI implements EKGListener {
     public javafx.scene.text.Text text;
@@ -22,9 +13,11 @@ public class EKGGUI implements EKGListener {
         EKGController.generator.register(this);
 
     }
+    public void LoadData(ActionEvent actionEvent)throws Exception{
 
+    }
     @Override
-    public void notify(EKGData data) {
+    public void notify(PatientDTO data) {
 
 
         if (possition < 700) {
@@ -37,9 +30,9 @@ public class EKGGUI implements EKGListener {
 
         if(possition == 50.0) {
             try {
-                text.setText("Temperatur: " + String.valueOf(DummyTemperatur.DummyTemperatur()) + "°C");
-                text2.setText("BPM: " + String.valueOf(DummyPuls.DummyPuls()));
-                text3.setText("SpO2: "+ String.valueOf(DummySpO2.DummySpO2()));
+                text.setText("Temperatur: " + String.valueOf(PatientDataGenerator.DummyTemperatur()) + "°C");
+                text2.setText("BPM: " + String.valueOf(PatientDataGenerator.DummyPuls()));
+                text3.setText("SpO2: "+ String.valueOf(PatientDataGenerator.DummySpO2()));
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
