@@ -6,7 +6,7 @@ import javafx.scene.text.TextFlow;
 
 import java.awt.*;
 
-public class DummyTemperatur implements EKGListener {
+public class DummyTemperatur {
 
     public static double DummyTemperatur() throws InterruptedException {
 
@@ -17,7 +17,7 @@ public class DummyTemperatur implements EKGListener {
                 int overst = 175;
                 int nederst = 165;
                 int range = overst - nederst + 1;
-                double rand = ((double)Math.random() * range) + nederst;
+                double rand = Math.floor((double)Math.random() * range) + nederst;
                 double temperatur = rand * 4 / 50 + 24;
                 return temperatur;
 
@@ -29,11 +29,6 @@ public class DummyTemperatur implements EKGListener {
     return 0;
     }
 
-    @Override
-    public void notify(EKGData data) {
 
-
-
-    }
 }
 
